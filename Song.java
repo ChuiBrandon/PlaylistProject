@@ -7,14 +7,14 @@ public class Song {
     //Fields-- what information do we want each Song to store?
     private String title;
     private String artist;
-    private int duration;
+    private double duration; //in minutes
     private boolean liked;
 
     /**
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
-    public Song(String myTitle, String myArtist, int myDuration){
+    public Song(String myTitle, String myArtist, double myDuration){
         title = myTitle;
         artist = myArtist;
         duration = myDuration;
@@ -36,12 +36,16 @@ public class Song {
         return artist;
       }
 
-      public int getDuration(){
+      public double getDuration(){
         return duration;
       }
 
       public boolean getLiked(){
         return liked;
+      }
+
+      public void setLiked(){
+        liked = true;
       }
 
       public String toString(){
