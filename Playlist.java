@@ -64,7 +64,7 @@ public class Playlist {
     }
 
     //Examining a sublist of all liked songs
-    public ArrayList<Boolean> getLiked(){
+    public ArrayList<Boolean> likedSublist(){
         ArrayList<Boolean> likedSublist = new ArrayList<Boolean>();
         for(Song a : playlist){
             likedSublist.add(a.getLiked());
