@@ -32,12 +32,24 @@ public class Playlist {
        * Removing all unliked songs from the playlist (careful with this one!)
        */
 
+    public ArrayList<Boolean> getLiked(){
+        ArrayList<Boolean> SList = new ArrayList<Boolean>();
+        for(Song a : playlist){
+            SList.add(a.getLiked());
+        }
+        return SList;
+    }
+
     //Adding a song
     public void addSong(Song a){
         playlist.add(a);
     }
 
     //'liking' a song
+    Song s = song.getLiked();
+    public void likeSong(Song a){
+        s.setLike();
+    }
 
     //Removing a specific song
     public void removeSong(String remove){
