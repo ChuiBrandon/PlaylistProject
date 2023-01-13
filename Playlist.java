@@ -64,12 +64,14 @@ public class Playlist {
     }
 
     //Examining a sublist of all liked songs
-    public ArrayList<Boolean> likedSublist(){
-        ArrayList<Boolean> likedSublist = new ArrayList<Boolean>();
+    public String likedSublist(){
+        String toStringSublist = "";
         for(Song a : playlist){
-            likedSublist.add(a.getLiked());
+            if(a.getLiked() == true){
+                toStringSublist += a.toString() + "\n";
+            }
         }
-        return likedSublist;
+        return toStringSublist;
     }
 
     //Determining the total duration of all songs
