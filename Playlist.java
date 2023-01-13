@@ -32,23 +32,15 @@ public class Playlist {
        * Removing all unliked songs from the playlist (careful with this one!)
        */
 
-    public ArrayList<Boolean> getLiked(){
-        ArrayList<Boolean> SList = new ArrayList<Boolean>();
-        for(Song a : playlist){
-            SList.add(a.getLiked());
-        }
-        return SList;
-    }
-
     //Adding a song
     public void addSong(Song a){
         playlist.add(a);
     }
 
     //'liking' a song
-    Song s = song.getLiked();
-    public void likeSong(Song a){
-        s.setLike();
+    public void likeSong(int x){
+        Song s = playlist.get(x);
+        s.setLiked();
     }
 
     //Removing a specific song
@@ -72,8 +64,29 @@ public class Playlist {
     }
 
     //Examining a sublist of all liked songs
+    public ArrayList<Boolean> getLiked(){
+        ArrayList<Boolean> likedSublist = new ArrayList<Boolean>();
+        for(Song a : playlist){
+            likedSublist.add(a.getLiked());
+        }
+        return likedSublist;
+    }
 
     //Determining the total duration of all songs
-
+    public double totalDuration(){
+        double totalDuration = 0;
+        for(int i = 0; i < playlist.size(); i++){
+            totalDuration += i;
+        }
+        return totalDuration;
+    }
     //Removing all unliked songs from the playlist
+    public void removeUnliked(){
+        for(int i = 0; i < playlist.size(); i++){
+            if(playlist.get(i).getLiked() == false){
+                playlist.remove(i);
+                i--;
+            }
+        }
+    }
 }
