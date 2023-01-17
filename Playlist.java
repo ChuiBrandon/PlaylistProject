@@ -67,7 +67,7 @@ public class Playlist {
     public String likedSublist(){
         String toStringSublist = "";
         for(Song a : playlist){
-            if(a.getLiked() == true){
+            if(a.getLiked() == "liked"){
                 toStringSublist += a.toString() + "\n";
             }
         }
@@ -85,7 +85,7 @@ public class Playlist {
     //Removing all unliked songs from the playlist
     public void removeUnliked(){
         for(int i = 0; i < playlist.size(); i++){
-            if(playlist.get(i).getLiked() == false){
+            if(playlist.get(i).getLiked() == "unliked"){
                 playlist.remove(i);
                 i--;
             }

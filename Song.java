@@ -40,8 +40,12 @@ public class Song {
         return duration;
       }
 
-      public boolean getLiked(){
-        return liked;
+      public String getLiked(){
+        if(liked == true){
+          return "liked";
+        }else{
+          return "unliked";
+        }
       }
 
       public void setLiked(){
@@ -49,6 +53,6 @@ public class Song {
       }
 
       public String toString(){
-        return "Title: " + title + " Artist: " + artist + " Duration: " + duration + " min" + " Liked: " + liked;
+        return "Title: " + title + " Artist: " + artist + " Duration: " + duration + " min" + " Status: " + getLiked();
       }
 }
