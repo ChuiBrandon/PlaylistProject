@@ -75,13 +75,21 @@ public class Playlist {
     }
 
     //Determining the total duration of all songs
-    public double totalDuration(){
-        double totalDuration = 0;
+    public String totalDuration(){
+        int min = 0;
+        int sec = 0;
         for(int i = 0; i < playlist.size(); i++){
-            totalDuration += i;
+            min += playlist.get(i).getMin();
+            sec += playlist.get(i).getSec();
         }
+        if(sec > 59){
+            min += (sec / 60);
+            sec = sec % 60;
+        }
+        String totalDuration = min + ":" + sec;
         return totalDuration;
     }
+    
     //Removing all unliked songs from the playlist
     public void removeUnliked(){
         for(int i = 0; i < playlist.size(); i++){
