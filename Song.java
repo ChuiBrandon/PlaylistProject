@@ -5,7 +5,7 @@
  */
 public class Song {
     //Fields-- what information do we want each Song to store?
-    private String title;
+    private String name;
     private String artist;
     private int min;
     private int sec;
@@ -15,8 +15,8 @@ public class Song {
      * Constructor-- what information needs to be given to make a Song?
      * How will you handle 'liked' songs? It makes sense for a Song not be 'liked' by default
      */
-    public Song(String myTitle, String myArtist, int myMin, int mySec){
-        title = myTitle;
+    public Song(String myName, String myArtist, int myMin, int mySec){
+        name = myName;
         artist = myArtist;
         min = myMin;
         sec = mySec;
@@ -30,8 +30,8 @@ public class Song {
       * song easily as well!
       * What kind of mutator (setter) methods will you need?
       */
-      public String getTitle(){
-        return title;
+      public String getName(){
+        return name;
       }
 
       public String getArtist(){
@@ -59,6 +59,6 @@ public class Song {
       }
 
       public String toString(){
-        return "Title: " + title + " - Artist: " + artist + " - Duration: " + min + ":" + sec + " - Status: " + getLiked();
+        return "Name: " + name + " - Artist: " + artist + " - Duration: " + min + ":" + sec + " - Status: " + getLiked();
       }
 }

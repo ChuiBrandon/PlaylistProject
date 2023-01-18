@@ -46,7 +46,7 @@ public class Playlist {
     //Removing a specific song
     public void removeSong(String remove){
         for(int i = 0; i < playlist.size(); i++){
-            if(remove.equals(playlist.get(i).getTitle())){
+            if(remove.equals(playlist.get(i).getName())){
                 playlist.remove(i);
                 i--;
             }
