@@ -48,13 +48,13 @@ public class PlaylistTester {
         System.out.println("Printing the songs...\n");
         System.out.println(SleepSongs.examineSongs());
 
-        System.out.println("\nPrinting the total duration of all remaining songs (minutes:seconds)...\n");
-        //Note that the format should look something like minutes:seconds
-        System.out.println(SleepSongs.totalDuration());
-
         System.out.println("\nPrinting only the liked songs...\n");
         //Your Playlist should be able to do this without looping while in main!
         System.out.println(SleepSongs.likedSublist());
+
+        System.out.println("\nPrinting the total duration of all songs (minutes:seconds)...\n");
+        //Note that the format should look something like minutes:seconds
+        System.out.println(SleepSongs.totalDuration());
 
         System.out.println("\nRemoving all unliked songs from the playlist...\n");
         //This should be doable with a single method call

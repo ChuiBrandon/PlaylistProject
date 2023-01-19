@@ -48,9 +48,9 @@ public class Song {
 
       public String getLiked(){
         if(liked == true){
-          return "liked";
+          return " -- liked";
         }else{
-          return "unliked";
+          return "";
         }
       }
 
@@ -58,7 +58,13 @@ public class Song {
         liked = true;
       }
 
-      public String toString(){
+      public String toString3(){
         return "Name: " + name + " - Artist: " + artist + " - Duration: " + min + ":" + sec + " - Status: " + getLiked();
+        //(“\"Third sentence.\"");
+      }
+
+      public String toString(){
+        return "\"" + name + "\" by " + artist + " (" + min + ":" + sec + ")" + getLiked();
+
       }
 }
