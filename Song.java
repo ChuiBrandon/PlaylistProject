@@ -58,11 +58,6 @@ public class Song {
         liked = true;
       }
 
-      public String toString3(){
-        return "Name: " + name + " - Artist: " + artist + " - Duration: " + min + ":" + sec + " - Status: " + getLiked();
-        //(“\"Third sentence.\"");
-      }
-
       public String toString(){
         return "\"" + name + "\" by " + artist + " (" + min + ":" + sec + ")" + getLiked();
 
